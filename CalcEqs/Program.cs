@@ -1,6 +1,5 @@
 ﻿namespace CalcEqs
 {
-
     internal class Program
     {
         const int N = 4;
@@ -13,6 +12,15 @@
             {
                 variableNumbers[i] = i;
             }
+
+            double[,] matrixAs = new double[N, N]
+{
+                { 1, 2, 3, -2 },
+                { 2, -1, -2, -3 },
+                { 3, 2, -1, 2 },
+                { 2, -3, 2, 1 }
+};
+
             double[,] matrixA = new double[N, N + 1]
             {
                 { 1, 2, 3, -2, 1},
@@ -20,11 +28,27 @@
                 { 3, 2, -1, 2, -5 },
                 { 2, -3, 2, 1, 1}
             };
+
+            double[,] matrixL = new double[N, N]
+            {
+                { 1, 2, 3, -2 },
+                { 2, -1, -2, -3 },
+                { 3, 2, -1, 2, },
+                { 2, -3, 2, 1 }
+            };
             Console.WriteLine("Matrix A: ");
             ShowVariablesVector(variableNumbers);
             ShowMatrix(matrixA);
             (int, int) maxElementIndex;
             double[,] matrixP;
+            double[,] matrixY = new double[N, N]
+            {
+                { 1, 0, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 0, 1, 0 },
+                { 0, 0, 0, 1 }
+            };
+            double[,] matrixX;
             double[,] matrixPAP;
             double[,] matrixM;
 
@@ -42,6 +66,8 @@
                 {
                     changeCount++;
                     matrixPAP = MultipleMatrix(matrixP, matrixA);
+                    matrixL = MultipleMatrix(matrixP, matrixL);
+                    matrixY = MultipleMatrix(matrixP, matrixY);
                 }
                 else
                 {
@@ -50,6 +76,10 @@
 
                 Console.WriteLine("Matrix PA: ");
                 ShowMatrix(matrixPAP);
+
+                matrixM = InitMatrixM(matrixL, n);
+                matrixL = MultipleMatrix(matrixM, matrixL);
+                matrixY = MultipleMatrix(matrixM, matrixY);
 
                 matrixP = InitMatrixP(N - n, maxElementIndex.Item2, N + 1);
                 Console.WriteLine("Matrix P: ");
@@ -84,6 +114,13 @@
 
             double det = GetDeterminant(maxElements, changeCount);
             Console.WriteLine($"Determinant: {det}");
+
+            matrixX = GetMatrixX(matrixL, matrixY);
+            Console.WriteLine("Matrix A(-1): ");
+            ShowMatrix(matrixX);
+
+            double cond = GetInfinityNorm(matrixAs) * GetInfinityNorm(matrixX);
+            Console.WriteLine($"Cond: {cond}");
 
             Console.Read();
         }
@@ -186,7 +223,7 @@
             {
                 for (int j = 0; j < cA; j++)
                 {
-                    Console.Write($"{matrix[i, j], 10:F3}");
+                    Console.Write($"{matrix[i, j],10:F3}");
                 }
                 Console.WriteLine();
             }
@@ -239,6 +276,42 @@
             for (int i = 0; i < vector.Length; i++)
             {
                 res *= vector[i];
+            }
+            return res;
+        }
+
+        public static double[,] GetMatrixX(double[,] matrixL, double[,] matrixY)
+        {
+            double[,] matrixRes = new double[N, N];
+
+            for (int k = 0; k < N; k++)
+            {
+                for (int i = N - 1; i >= 0; i--)
+                {
+                    matrixRes[i, k] = matrixY[i, k];
+                    for (int j = N - 1; j > i; j--)
+                    {
+                        matrixRes[i, k] -= matrixL[i, j] * matrixRes[j, k];
+                    }
+                }
+            }
+            return matrixRes;
+        }
+
+        public static double GetInfinityNorm(double[,] matrix)
+        {
+            double res = 0;
+            for (int i = 0; i < matrix.GetLength(1); i++)
+            {
+                double sum = 0;
+                for (int j = 0; j < matrix.GetLength(0); j++)
+                {
+                    sum += Math.Abs(matrix[i, j]);
+                }
+                if (res < sum)
+                {
+                    res = sum;
+                }
             }
             return res;
         }
