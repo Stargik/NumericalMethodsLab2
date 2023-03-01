@@ -1,0 +1,15 @@
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/bin/Debug/net7.0/CalcIterationEqs
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/bin/Debug/net7.0/CalcIterationEqs.deps.json
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/bin/Debug/net7.0/CalcIterationEqs.runtimeconfig.json
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/bin/Debug/net7.0/CalcIterationEqs.dll
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/bin/Debug/net7.0/CalcIterationEqs.pdb
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.csproj.AssemblyReference.cache
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.AssemblyInfoInputs.cache
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.AssemblyInfo.cs
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.csproj.CoreCompileInputs.cache
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.dll
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/refint/CalcIterationEqs.dll
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.pdb
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/CalcIterationEqs.genruntimeconfig.cache
+/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/Debug/net7.0/ref/CalcIterationEqs.dll

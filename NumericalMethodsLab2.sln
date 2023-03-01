@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcEqs", "CalcEqs\CalcEqs.csproj", "{1FCA0BE2-4671-4B09-84C9-1548DB01A2A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcIterationEqs", "CalcIterationEqs\CalcIterationEqs.csproj", "{B3E3A829-41EC-4E23-B20A-B89E84AB2A84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1FCA0BE2-4671-4B09-84C9-1548DB01A2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FCA0BE2-4671-4B09-84C9-1548DB01A2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FCA0BE2-4671-4B09-84C9-1548DB01A2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E3A829-41EC-4E23-B20A-B89E84AB2A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E3A829-41EC-4E23-B20A-B89E84AB2A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E3A829-41EC-4E23-B20A-B89E84AB2A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E3A829-41EC-4E23-B20A-B89E84AB2A84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
