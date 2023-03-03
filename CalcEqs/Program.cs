@@ -48,9 +48,17 @@
                 { 0, 0, 1, 0 },
                 { 0, 0, 0, 1 }
             };
+            double[,] matrixY2 = new double[N, N]
+            {
+                { 1, 0, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 0, 1, 0 },
+                { 0, 0, 0, 1 }
+            };
             double[,] matrixX;
             double[,] matrixPAP;
             double[,] matrixM;
+            double[,] matrixM2 = new double[N,N];
 
             for (int n = N; n > 0; n--)
             {
@@ -99,6 +107,9 @@
                 variableNumbers[maxElementIndex.Item2] = old;
 
                 matrixM = InitMatrixM(matrixPAP, n);
+                matrixM2 = InitMatrixMinusM(matrixPAP, n);
+                matrixY2 = MultipleMatrix(matrixM2, matrixY2);
+
                 Console.WriteLine("Matrix M: ");
                 ShowMatrix(matrixM);
 
@@ -107,6 +118,9 @@
                 ShowVariablesVector(variableNumbers);
                 ShowMatrix(matrixA);
             }
+
+
+
             double[] res = GetVectorRes(matrixA);
             res = GetReorderedVector(res, variableNumbers);
             Console.WriteLine("Result:");
@@ -119,7 +133,11 @@
             Console.WriteLine("Matrix A(-1): ");
             ShowMatrix(matrixX);
 
-            double cond = GetInfinityNorm(matrixAs) * GetInfinityNorm(matrixX);
+            double normA = GetInfinityNorm(matrixAs);
+            double normX = GetInfinityNorm(matrixX);
+            double cond = normA * normX;
+            Console.WriteLine($"Norm A: {normA}");
+            Console.WriteLine($"Norm A(-1): {normX}");
             Console.WriteLine($"Cond: {cond}");
 
             Console.Read();
@@ -180,6 +198,34 @@
                         if (i >= j)
                         {
                             matrixRes[i, j] = (i == j) ? (1 / matrix[j, j]) : -(matrix[i, j] / matrix[j, j]);
+                        }
+                        else
+                        {
+                            matrixRes[i, j] = 0;
+                        }
+                    }
+                    else
+                    {
+                        matrixRes[i, j] = (i == j) ? 1 : 0;
+                    }
+                }
+            }
+            return matrixRes;
+        }
+
+        public static double[,] InitMatrixMinusM(double[,] matrix, int dimension)
+        {
+            int rA = matrix.GetLength(0);
+            double[,] matrixRes = new double[rA, rA];
+            for (int i = 0; i < rA; i++)
+            {
+                for (int j = 0; j < rA; j++)
+                {
+                    if (j == N - dimension)
+                    {
+                        if (i >= j)
+                        {
+                            matrixRes[i, j] = (i == j) ? (matrix[j, j]) : (matrix[i, j] / matrix[j, j]);
                         }
                         else
                         {

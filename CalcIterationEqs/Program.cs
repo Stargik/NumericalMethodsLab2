@@ -19,10 +19,13 @@ class Program
         double[] resultVector = Iterate(oldResultVector, matrixA);
         double infinityNorm = GetInfinityNorm(SubtractVectors(resultVector, oldResultVector));
         iterationNumber++;
+        ShowResultVector(oldResultVector);
+        Console.WriteLine();
         while (infinityNorm > eps)
         {
             Console.WriteLine($"Iteration {iterationNumber}:");
             ShowResultVector(resultVector);
+            Console.WriteLine($"||X{iterationNumber} - X{iterationNumber - 1}|| = {infinityNorm}");
             Console.WriteLine();
             oldResultVector = resultVector;
             resultVector = Iterate(resultVector, matrixA);
@@ -31,6 +34,7 @@ class Program
         }
         Console.WriteLine($"Iteration {iterationNumber}:");
         ShowResultVector(resultVector);
+        Console.WriteLine($"||X{iterationNumber} - X{iterationNumber - 1}|| = {infinityNorm}");
         Console.Read();
     }
 
