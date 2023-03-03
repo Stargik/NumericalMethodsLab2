@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/CalcIterationEqs.csproj": {}
+    "D:\\Repositories\\Git\\GitHub\\NumericalMethodsLab2\\CalcIterationEqs\\CalcIterationEqs.csproj": {}
   },
   "projects": {
-    "/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/CalcIterationEqs.csproj": {
+    "D:\\Repositories\\Git\\GitHub\\NumericalMethodsLab2\\CalcIterationEqs\\CalcIterationEqs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/CalcIterationEqs.csproj",
+        "projectUniqueName": "D:\\Repositories\\Git\\GitHub\\NumericalMethodsLab2\\CalcIterationEqs\\CalcIterationEqs.csproj",
         "projectName": "CalcIterationEqs",
-        "projectPath": "/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/CalcIterationEqs.csproj",
-        "packagesPath": "/Users/aleksandrstarzhynskyi/.nuget/packages/",
-        "outputPath": "/Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/NumericalMethodsLab2/CalcIterationEqs/obj/",
+        "projectPath": "D:\\Repositories\\Git\\GitHub\\NumericalMethodsLab2\\CalcIterationEqs\\CalcIterationEqs.csproj",
+        "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositories\\Git\\GitHub\\NumericalMethodsLab2\\CalcIterationEqs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/aleksandrstarzhynskyi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
